@@ -47,7 +47,7 @@ public class BankingAppMain {
             }
         }
         }
-     // Validate the entered account type
+     
         private static boolean isValidAccountType(String accountType) {
             return accountType.equals("savings") || accountType.equals("deposit") || accountType.equals("loan");
         }
@@ -57,10 +57,10 @@ public class BankingAppMain {
     private static void captureAccountDetails(AccountService accountService, Scanner scanner) {
         System.out.print("Enter Account Type (savings/deposit/loan): ");
         String accountType = scanner.nextLine().toLowerCase();
-        // Validate the entered account type
+        
             if (!isValidAccountType(accountType)) {
             System.out.println("Invalid account type. Please enter 'savings', 'deposit', or 'loan'.");
-            return; // Exit the method
+            return;
             }
         System.out.print("Enter Account ID: ");
         int id = scanner.nextInt();
